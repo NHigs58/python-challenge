@@ -5,11 +5,7 @@ import csv
 # join path
 election_csv = os.path.join("Resources", "election_data.csv")
 
-<<<<<<< HEAD
 # create lists 
-=======
-# create variables 
->>>>>>> 76723b7956f6e6a3a6fc9634e09d3432fbfa8e47
 total_votes = 0
 candidates = ["Khan", "Correy", "Li", "O'Tooley"]
 khan = 0
@@ -17,10 +13,7 @@ correy = 0
 li = 0
 otooley = 0
 votes = [khan, correy, li, otooley]
-<<<<<<< HEAD
-=======
 
->>>>>>> 76723b7956f6e6a3a6fc9634e09d3432fbfa8e47
 # Open Csv
 with open(election_csv, newline="") as csvfile:
     
@@ -33,17 +26,10 @@ with open(election_csv, newline="") as csvfile:
     # Iterate through rows 
     for row in csvreader:
 
-<<<<<<< HEAD
         # Append the total votes and candidates to their corresponding lists
         total_votes +=1
         
 
-=======
-        # count ID's and store in variable 
-        total_votes +=1
-        
-        # Count the number of times each name appears and store it in variable 
->>>>>>> 76723b7956f6e6a3a6fc9634e09d3432fbfa8e47
         if row[2] == "Khan":
             khan +=1
         elif row[2] == "Correy":
@@ -53,17 +39,11 @@ with open(election_csv, newline="") as csvfile:
         elif row[2] == "O'Tooley":
             otooley +=1
 
-<<<<<<< HEAD
-candidates_votes = dict(zip(candidates, votes))
-winner = max(candidates_votes, key= candidates_votes.get)
-        
-=======
 # create a dictionary to find the winner 
 candidates_votes = dict(zip(candidates, votes))
 winner = max(candidates_votes, key= candidates_votes.get)
 
 # find voter percentage for each candidate        
->>>>>>> 76723b7956f6e6a3a6fc9634e09d3432fbfa8e47
 khan_per = (khan/total_votes) * 100
 correy_per = (correy/total_votes) * 100
 li_per = (li/total_votes) * 100
